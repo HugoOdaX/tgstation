@@ -5,9 +5,19 @@
 	icon = 'icons/obj/doors/shutters.dmi'
 	layer = SHUTTER_LAYER
 	closingLayer = SHUTTER_LAYER
-	damage_deflection = 20
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 75, "bomb" = 25, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 70)
 	max_integrity = 100
+
+/obj/machinery/door/poddoor/shutters/multitool_act(mob/living/user, obj/item/multitool/I)
+	. = ..()
+	if (istype(I))
+		id = (id+1)
+		to_chat(user, "<span class='notice'>You change the shutters ID to '[id]'.</span>")
+
+/obj/machinery/door/poddoor/shutters/examine(mob/user)
+	. = ..()
+	if(id)
+		. += "<span class='notice'>Its channel ID is '[id]'.</span>"
 
 /obj/machinery/door/poddoor/shutters/preopen
 	icon_state = "open"

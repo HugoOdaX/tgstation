@@ -1004,6 +1004,14 @@
 	build_path = /obj/item/modular_computer/tablet
 	category = list("initial","Misc")
 
+/datum/design/control
+	name = "Blast Door Controller"
+	id = "blast"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 100, /datum/material/glass = 50)
+	build_path = /obj/item/assembly/control
+	category = list("initial","Misc")
+
 /datum/design/slime_scanner
 	name = "Slime Scanner"
 	id = "slime_scanner"

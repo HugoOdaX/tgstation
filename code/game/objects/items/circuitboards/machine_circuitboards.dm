@@ -1234,3 +1234,12 @@
 		/obj/item/stock_parts/scanning_module = 2
 	)
 
+/obj/item/circuitboard/machine/shutters
+	name = "Shutters (Machine Board)"
+	build_path = /obj/machinery/door/poddoor/shutters
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stack/cable_coil = 5,
+		/obj/item/stock_parts/capacitor = 2)
+
+/obj/item/circuitboard/machine/shutters/multitool_act(mob/living/user, obj/item/multitool/I)

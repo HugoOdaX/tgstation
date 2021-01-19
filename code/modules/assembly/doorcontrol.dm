@@ -3,10 +3,16 @@
 	desc = "A small electronic device able to control a blast door remotely."
 	icon_state = "control"
 	attachable = TRUE
-	var/id = null
-	var/can_change_id = 0
+	var/id = 1
+	var/can_change_id = 1
 	var/cooldown = FALSE //Door cooldowns
 	var/sync_doors = TRUE
+
+/obj/item/assembly/control/multitool_act(mob/living/user, obj/item/multitool/I)
+	. = ..()
+	if (istype(I))
+		id = (id+1)
+		to_chat(user, "<span class='notice'>You change the controller's ID to '[id]'.</span>")
 
 /obj/item/assembly/control/examine(mob/user)
 	. = ..()

@@ -647,6 +647,13 @@
 	build_path = /obj/item/circuitboard/machine/accounting
 	category = list ("Misc. Machinery")
 
+/datum/design/board/shutters
+	name = "Machine Design (Shutters)"
+	desc = "The circuit board for a shutters."
+	id = "shutters"
+	build_path = /obj/item/circuitboard/machine/shutters
+	category = list ("Misc. Machinery")
+
 //Hypertorus fusion reactor designs
 
 /datum/design/board/HFR_core
